@@ -38,7 +38,6 @@ handleDisconnect();
 
 const register = (username, password, name) => {
     return new Promise((resolve,reject)=>{
-
         dbConn.query(
           `insert into users (username,password,name) values ("${username}","${password}","${name}")`,
           (err, result, fields) => {
@@ -52,7 +51,6 @@ const register = (username, password, name) => {
 
 const getUsereByUsername = (username) => {
     return new Promise((resolve,reject)=>{
-
         dbConn.query(
           `select * from users where username ='${username}' limit 1`,
           (err, result, fields) => {
